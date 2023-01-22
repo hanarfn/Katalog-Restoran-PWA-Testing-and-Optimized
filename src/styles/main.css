@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Poly:ital@1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+body {
+    font-family: 'Poly', serif;
+}
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+.content {
+    padding: 32px;
+}
+.skip-link {
+    position: absolute;
+    top: -33px;
+    left: 0;
+    background-color: #5F8D4E;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    border-radius: 50px;
+}
+.skip-link:focus {
+    top: 0;
+    transition: all 0.5s;
+}
+
+.card {
+    width: 100%;
+    margin: 15px auto;
+    text-align: center;
+    margin-top: 90px;
+}
+.card__label {
+    font-size: 32px;
+    font-weight: lighter;
+    color: #5F8D4E;
+}
+.card__label::after {
+    content: '';
+    margin-top: 16px;
+    display: block;
+    border-bottom: 1px solid white;
+}
+.card-rating {
+    color: orange;
+}
+
+.detail {
+    margin-top: 32px;
+}
+.restaurant-picture {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+}
+.detailRestaurant {
+    display: grid;
+    text-align: left;
+}
+.detailRestaurant h2{
+    font-size: 1.2em;
+    color: #5F8D4E;
+}
+.restaurant-description-title {
+    text-align: center;
+    font-size: 1em;
+}
+.restaurant-description {
+    text-align: justify;
+    margin: auto;
+}
+.restaurant-categories {
+    text-align: left;
+    margin: auto;
+}
+.restaurant-categories-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: 1px solid #5F8D4E;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 1em;
+}
+.detailRestaurant-menu h2 {
+    font-size: 1.2em;
+    color: #5F8D4E;
+}
+.restaurant-menu h3 {
+    text-align: center;
+    font-size: 1em;
+}
+.restaurant-menu ul {
+    margin: 0 auto;
+}
+.restaurant-menu li {
+    list-style-type: none;
+    text-align: left;
+}
+.review-title {
+    font-size: 1.2em;
+    color: #5F8D4E;
+}
+.restaurant-review {
+    margin-bottom: 20px;
+    margin: 5px auto;
+}
+.restaurant-review:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+.review-name {
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: left;
+}
+.review-date {
+    font-size: 1rem;
+}
+.review-comment {
+    text-align: left;
+    padding-top: 10px;
+}
+.form-review {
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 10px;
+}
+.form-review h2 {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    color: #5F8D4E;
+}
+.form-group {
+    flex-direction: row;
+    text-align: left;
+    margin-top: 10px;
+}
+.form-control {
+    padding: 5px;
+    font-size: 15px;
+    min-height: 44px;
+    width: 90%;
+}
+.submitReview {
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 1rem;
+    font-family: 'Poly', serif;
+    cursor: pointer;
+    margin: auto;
+    border: 0;
+    color: #5F8D4E;
+    font-weight: bold;
+}
+.submitReview:hover {
+    background-color: #A4BE7B;
+    color: #5F8D4E;
+}
+.like {
+    font-size: 25px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #ffffff;
+    color: #A4BE7B;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #285430;
+    color: white;
+}
+
+.header {
+    min-height: 44px;
+    min-width: 44px;
+    transition: min-height 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+.header_logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.header_logo img {
+    width: 50px;
+    height: 50px;
+}
+.header_logo a {
+    color: #5F8D4E;
+    min-height: 44px;
+    min-width: 44px;
+    font-size: 2em;
+    font-weight: 500;
+}
+.menu_toggle {
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-width: 0;
+}
+.header_nav {
+    text-align: center;
+}
+.nav_list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.nav_list a {
+    display: inline-block;
+    padding: 1.3em;
+    color: #616161;
+}
+.nav_list a:hover {
+    color: #285430;
+}
+.nav_item {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    line-height: 24px;
+}
+.nav_item a {
+    font-size: 20px;
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: #5F8D4E;
+}
+.nav_item a:hover {
+    background-color: #A4BE7B;
+    transition: all 0.3s;
+}
+
+.hero {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    background-position: center;
+    position: relative;
+}
+.hero__inner {
+    margin: 0 auto;
+    align-items: center;
+    border-radius: 12px;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    background-position: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+}
+.hero__title {
+    margin-top: 160px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.5em;
+}
+.hero__tagline {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.lists {
+    margin: 32px auto auto;
+    text-align: left;
+    gap: 50;
+    display: grid;
+    grid-row-gap: 20px;
+}
+.list-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+} 
+.list-item a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.list-item:hover {
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, -10px);
+    transition: transform 0.5s ease;
+}
+.list-item__content {
+    padding: 15px;
+}
+.list-item__content a{
+    font-size: 25px;
+    color: #5F8D4E;
+    align-items: center;
+    display: flex;
+    transition: 0.3s opacity;
+    min-height: 44px;
+    min-width: 44px;
+}
+.list-item__title {
+    font-weight: bold;
+    font-size: 32px;
+    transition: 0.3s opacity;
+    color: #5F8D4E;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    display: flex;
+}
+.list-item__title:hover {
+    color: #A4BE7B;
+}
+.list-item__description {
+    font-size: 12px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+.list-item__thumbnail {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+}
+.list-thumbnail {
+    position: relative;
+}
+.list-city {
+    position: absolute;
+    top: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.loader-container {
+    position: fixed;
+    background-color: rgba(54, 53, 53, 0.8);
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    top: 0;
+    display: block;
+}
+#loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #303030;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 768px) {
+    .header_navbar .header_drawer {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .header_nav {
+        z-index: 10;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        transition: all 0.3s;
+        top: -500px;
+    }
+    .open {
+        top: 75px;
+    }
+    .nav_item {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        border-bottom: 1px solid #E0E0E0;
+        width: 100%;
+        text-align: left;
+    }
+    .nav_item a {
+        font-size: 28px;
+    }
+    .about_us a {
+        padding: 20px 30px;
+    }
+    .about_us {
+        padding: 30px;
+    }
+    .review-header {
+        flex-direction: column;
+    }
+    .review-name {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .review-date {
+        text-align: left;
+    }
+}
+@media screen and (min-width: 650px) {
+    .list-item__content {
+        padding: 16px 32px 32px 32px;
+    }
+    .list-item__title {
+        font-size: 18px;
+    }
+    .list-item__description {
+        font-size: 14px;
+    }
+    .menu_toggle {
+        display: none;
+    }
+    .restaurant-review {
+        padding: 10px 20px;
+    }  
+    .form-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }  
+}
+@media screen and (min-width: 700px) {
+    .lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+    .restaurant-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+}
+@media screen and (min-width: 900px) {
+    .lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .restaurant-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+    .nav_list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .hero {
+        max-width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .hero {
+        background:url(/images/hero-small.jpg);
+    }
+}
+@media only screen and (min-width: 651px) {
+    .hero {
+        background:url(/images/hero-large.jpg);
+    }
+}
