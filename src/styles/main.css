@@ -287,7 +287,7 @@ footer {
     width: 100%;
     text-align: center;
     background-position: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background-image: url("../images/hero.jpg");
     position: absolute;
 }
 .hero__title {
